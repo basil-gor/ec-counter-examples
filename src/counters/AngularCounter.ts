@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+//@ts-nocheck
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-counter',
+  selector: "app-counter",
   template: `
     <button (click)="decrement()">-</button>
     {{ count }}
     <button (click)="increment()">+</button>
-  `
+  `,
 })
 export class CounterComponent {
   count = 0;

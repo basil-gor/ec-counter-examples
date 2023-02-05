@@ -6,15 +6,20 @@
   </div>
 </template>
 
-<script setup>
+<script>
 import { ref } from "vue";
 
 export default {
+  name: "TheCounter",
   setup() {
     const count = ref(0);
-    const increment = () => { count.value++; };
-    const decrement = () => { count.value--; };
+    const increment = () => {
+      count.value++;
+    };
+    const decrement = () => {
+      count.value--;
+    };
     return { count, increment, decrement };
-  }
+  },
 };
 </script>
