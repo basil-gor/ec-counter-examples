@@ -8,6 +8,7 @@ interface ProductCartComposable {
   deleteFromBag: () => void;
   productQuantityInBag: Ref<number>;
 }
+
 export function useProductCart(product: Ref<Product>): ProductCartComposable {
   const cart = useCart();
   const addToBag = () => {

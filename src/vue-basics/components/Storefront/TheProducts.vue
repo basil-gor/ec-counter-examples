@@ -52,5 +52,6 @@ export default defineComponent({
 .products__items {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 </style>

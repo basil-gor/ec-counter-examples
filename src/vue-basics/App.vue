@@ -10,9 +10,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
+import { defineComponent } from "vue";
 import TheCountersPage from "@/vue-basics/components/Counters/TheCountersPage.vue";
 import TheStorefrontPage from "@/vue-basics/components/Storefront/TheStorefrontPage.vue";
+import { useLocalStorage } from "@vueuse/core";
 
 export default defineComponent({
   name: "App",
@@ -21,7 +22,7 @@ export default defineComponent({
     TheCountersPage,
   },
   setup() {
-    const showCounterDemo = ref(true);
+    const showCounterDemo = useLocalStorage("showCountersDemo", true);
 
     return {
       showCounterDemo,
