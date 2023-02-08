@@ -6,11 +6,11 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { useCounterStore } from "@/vue-basics/stores/counter-store";
-import { toRefs } from "vue";
+import { defineComponent, toRefs } from "vue";
 
-export default {
+export default defineComponent({
   name: "TheCounterStored",
   setup() {
     const counterStore = useCounterStore();
@@ -24,5 +24,5 @@ export default {
       decrement,
     };
   },
-};
+});
 </script>

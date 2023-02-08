@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { defineComponent, ref } from "vue";
 
-export default {
+export default defineComponent({
   setup() {
     const count = ref(0);
     const increment = () => {
@@ -20,5 +20,5 @@ export default {
     };
     return { count, increment, decrement };
   },
-};
+});
 </script>

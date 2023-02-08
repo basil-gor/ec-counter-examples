@@ -6,10 +6,10 @@
   </div>
 </template>
 
-<script>
-import { ref } from "vue";
+<script lang="ts">
+import { defineComponent, ref } from "vue";
 
-export default {
+export default defineComponent({
   name: "TheCounter",
   setup() {
     const count = ref(0);
@@ -21,5 +21,5 @@ export default {
     };
     return { count, increment, decrement };
   },
-};
+});
 </script>

@@ -6,10 +6,11 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { useCounterComposable } from "@/vue-basics/composables/counter-composable";
+import { defineComponent } from "vue";
 
-export default {
+export default defineComponent({
   name: "TheCounterComposabled",
   setup() {
     const { count, increment, decrement } = useCounterComposable();
@@ -20,5 +21,5 @@ export default {
       decrement,
     };
   },
-};
+});
 </script>
